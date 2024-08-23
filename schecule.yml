@@ -1,0 +1,13 @@
+# A cada 1 minuto log da data de execução no log. Roda a cada 5 minutos
+name: Schedule: A cada 5 minutos
+
+on:
+  schedule: 
+  - cron: '*/1 * * * *'
+ 
+jobs:
+  hello world:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Echo current time 
+      - run: echo "The current server time is $(date)"  #No log da action mostra a hora no momento da execução.
